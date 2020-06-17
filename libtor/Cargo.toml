@@ -11,6 +11,9 @@ keywords = ["tor", "daemon"]
 readme = "README.md"
 
 [dependencies]
-libtor-sys = "43.5.1"
+libtor-sys = { version = "43.5.1", git = "https://github.com/MagicalBitcoin/libtor-sys", branch = "optional-vendored-ssl" }
 libtor-derive = "0.1"
 log = "^0.4"
+
+[features]
+vendored-openssl = ["libtor-sys/vendored-openssl"]
